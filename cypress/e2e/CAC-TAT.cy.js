@@ -215,9 +215,103 @@ it('Exercício Extra 1 - Selecionar um Produto por Seu Valor (MENTORIA)', () => 
          .check()
          .should('be.checked')
       })
-  })
+    })
+    it('Ecercício - Marca Ambos Checkboxes, Depois Desmarca o Último',() => {
+      cy.get('input[type="checkbox"]')
+       .check()
+       .should('be.checked')
+       .last()
+       .uncheck()
+       .should('not.be.checked')
+          
+    }) 
+    it('Exercício Extra - Número de Telefone Obrigatório, Com Envio Sem Preenchimento Anterior', () => {
+      cy.get('[name="firstName"]').type('Rodolfo');
+      cy.get('[name="lastName"]').type('Evangelino');
+      cy.get('input[type="email"]').type('teste@big.com.br');
+      cy.get('[id="phone-checkbox"]').check();
+      cy.get('[name="open-text-area"]')
+      .type('Novo texto para teste de exercício extra 4');
+      cy.contains('Enviar').click();
 
- }) 
+      cy.get('.error').should('be.visible');
+    }) 
+    //Lição 6 (Comando: selectFile)
+    it('Exercício - Seleciona um Arquivo da Pasta Fixtures Utilizando .should()', () => {
+      cy.get('input[type="file"]')
+       .selectFile('cypress/fixtures/example.json')
+       .should(input => {
+        expect(input[0].files[0].name).to.equal('example.json')
+       })
+      })
+    it('Exercício - Seleciona um Arquivo da Pasta Fixtures', () => {
+      cy.get('input[type="file"]').selectFile('cypress/fixtures/example.json')
+       .then(input => {
+        expect(input[0].files[0].name).to.equal('example.json')
+       })
+    })
+    it('Exercício Extra 1 - Seleciona um Arquivo Simulando um drag-and-drop', () => {
+      cy.get('input[type="file"]')
+      .selectFile('cypress/fixtures/example.json', { action: 'drag-drop' })
+       .then(input => {
+        expect(input[0].files[0].name).to.equal('example.json')
+       })
+      })
+      it('Exercício Extra 2 - Seleciona um Arquivo Utilizando uma Fixture para qual foi Dada um Alias', () => {
+        cy.fixture('example.json').as('arquivodeexemplo')
+        cy.get('input[type="file"]')
+        .selectFile('@arquivodeexemplo')
+        .then(input => {
+          expect(input[0].files[0].name).to.equal('example.json')
+         })
+    }) 
+    //Lição 7 (Comando: .invoke(), atributo target="_blank", abrir página em outra aba do navegador)
+    it('Exercício - Verifica que a Política de Privacidade abre em Outra Aba sem a Necessidade de um Clique', () => {
+      // cy.get('a') - Seletor
+      // cy.get('[href="privacy.html"][target="_blank"]') - Outras Forma de Selecionar o Eemento
+      // cy.contains('a', 'Política de Privacidade') - Mais uma Forma de Teste
+      //  .should('have.attr', 'href', 'privacy.html') - Mais uma Forma de Teste
+      //  .and('have.attr', 'target', '_blank' ) - Mais uma Forma de Teste
+      cy.get('a').contains('Política de Privacidade')
+       .should('have.attr', 'target', '_blank')
+       })
+       it('Exercício Extra 1 - Acessa a Página da Política de Privacidade Removendo o Target e então Clicando no Link', () => {
+        // cy.get('a')
+        // cy.get('[href="privacy.html"][target="_blank"]')
+        // cy.get('a:contains("Política de Privacidade")')
+        cy.get('a').contains('Política de Privacidade')        
+         .invoke('removeAttr', 'target')
+         .click()
+         cy.contains('#title', 'CAC TAT - Política de Privacidade').should('be.visible')
+         })
+         it('Exercício Extra 2 - Testa a Página da Política de Privacidade de forma Independente', () => {
+          cy.visit('/src/privacy.html')
+          cy.get('#title')
+           .should('be.visible')
+           .and('have.text', 'CAC TAT - Política de Privacidade')
+        })
+        //Lição 8 (Simulando o viewport de um dispositivo móvel)
+        // Exercício - Crie um script no arquivo package.json que abre o Cypress Runner simulando um dispositivo
+        //  com 410 pixels de largura e 860 pixels de altura
+        // Basta incluir a linha de comando dentro do arquivo packgae.json na opção de scripts: 
+        // "cy:open:mobile": "cypress open --config viewportWidth=410,viewportHeight=860",
+        // e executar dentro do terminal o comando cy:open:mobile
+        it.only('Exercício  - ', () => {
+          
+        })
+     })
+              
+
+
+
+
+
+      
+
+
+
+
+
  
    
        

@@ -1,28 +1,26 @@
 # 🌲 Cypress, do Zero à Nuvem ☁️
+![Cypress End to End](https://github.com/wlsf82/cy-data-test/actions/workflows/ci.yml/badge.svg)
 
-👋 Seja bem-vindo(a)!
+Este projeto destina-se ao Curso de Cypress, onde você percorrerá uma trilha de aprendizado do Zero à Nuvem, e aplicará de forma prática os pricnipais conceitos em torno de Testes Web.
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+# Pré-resquisitos:
 
-## O que você vai aprender?
+Lógica de Programação, Noções em Java Script, Conhecimento em Front End, mais especificamente CSS para o uso dos Seletores, e muita vontade de se aprofundar na documentação [Visite a Documentação do Cypress.io](https://docs.cypress.io/api/table-of-contents).
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+Recursos: Foram utilizados, Node.js v20.16.0 e npm 10.8.1, ou seja, versões tulizadas para Nodes.js e npm.
 
-## Vamos começar?
+# Instalção
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+Execute npm install (ou npm ipara a versão curta) para instalar as dependências de desenvolvimento.
 
-___
+# Testes
 
-Este é um curso da **Escola Talking About Testing**.
+Execute npm test (ou npm tpara a versão curta) para executar o teste no modo headless.
+
+Ou execute npm run cy:openpara abrir o Cypress no modo interativo.
+
+# Apoie este projeto
+
+Caso queira apoiar este projeto, deixe um ⭐.
+
+Criado com carinho e atenção por [Alan Garcia](https://www.linkedin.com/in/alan-garcia-santos/).
