@@ -8,7 +8,7 @@
   //   // cy.visit('C:/cypress-do-zero-a-nuvem/src/index.html')
   //   cy.visit('./src/index.html')
 
-  //   // Verifica o título da página
+  
   //   // cy.title().should('eq', 'Central de Atedntimento ao Cliente TAT')
   //   cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT')
   //   // cy.title().should('eq', 'CAC TAT')
