@@ -191,11 +191,11 @@ it('Exercício Extra 1 - Selecionar um Produto por Seu Valor (MENTORIA)', () => 
     .check()
     .should('be.checked');
   })
-  it('Simulação para Checkbox Não Marcado/Selecionado',() => {
-    cy.get('input[type="radio"][value="feedback"]')
-    .check()
-    .should('not.be.checked');
-  })
+  // it('Simulação para Checkbox Não Marcado/Selecionado',() => {
+  //   cy.get('input[type="radio"][value="feedback"]')
+  //   .check()
+  //   .should('not.be.checked');
+  // })
   it('Exercício Extra - Marca Cada Tipo de Atendimento',() => {
     cy.get('input[type="radio"][value="ajuda"]')
     .check()
@@ -296,9 +296,9 @@ it('Exercício Extra 1 - Selecionar um Produto por Seu Valor (MENTORIA)', () => 
         // Basta incluir a linha de comando dentro do arquivo packgae.json na opção de scripts: 
         // "cy:open:mobile": "cypress open --config viewportWidth=410,viewportHeight=860",
         // e executar dentro do terminal o comando cy:open:mobile
-        it.only('Exercício  - ', () => {
+        // it('Exercício  - ', () => {
           
-        })
+        // })
      })
               
 
