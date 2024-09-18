@@ -8,7 +8,7 @@
   //   // cy.visit('C:/cypress-do-zero-a-nuvem/src/index.html')
   //   cy.visit('./src/index.html')
 
-  
+  //   // Verifica o título da página
   //   // cy.title().should('eq', 'Central de Atedntimento ao Cliente TAT')
   //   cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT')
   //   // cy.title().should('eq', 'CAC TAT')
@@ -296,10 +296,11 @@ it('Exercício Extra 1 - Selecionar um Produto por Seu Valor (MENTORIA)', () => 
         // Basta incluir a linha de comando dentro do arquivo packgae.json na opção de scripts: 
         // "cy:open:mobile": "cypress open --config viewportWidth=410,viewportHeight=860",
         // e executar dentro do terminal o comando cy:open:mobile
-        // it('Exercício  - ', () => {
+        it('Em desenvolvimento...  - ', () => {
           
-        // })
+        })
      })
+  
               
 
 
