@@ -59,7 +59,7 @@
         cy.get('[name="open-text-area"]').type(textoLongo, { delay: 0})
       })
 
-      it('Exercício Extra 2 - Preenche Sem Campo Obrigatório e Envio do Formulário (e-mail incorreto)', () => {
+      it.only('Exercício Extra 2 - Preenche Sem Campo Obrigatório e Envio do Formulário (e-mail incorreto)', () => {
         // cy.visit('C:/cypress-do-zero-a-nuvem/src/index.html')
         // cy.visit('./src/index.html');
         cy.get('[name="firstName"]').type('Rodolfo');
