@@ -290,16 +290,17 @@ it('Exercício Extra 1 - Selecionar um Produto por Seu Valor (MENTORIA)', () => 
            .should('be.visible')
            .and('have.text', 'CAC TAT - Política de Privacidade')
         })
-        //Lição 8 (Simulando o viewport de um dispositivo móvel)
+        // Lição 8 (Simulando o viewport de um dispositivo móvel)
         // Exercício - Crie um script no arquivo package.json que abre o Cypress Runner simulando um dispositivo
         //  com 410 pixels de largura e 860 pixels de altura
         // Basta incluir a linha de comando dentro do arquivo packgae.json na opção de scripts: 
         // "cy:open:mobile": "cypress open --config viewportWidth=410,viewportHeight=860",
         // e executar dentro do terminal o comando cy:open:mobile
-        // it('Em desenvolvimento...  - ', () => {
+        it('Em desenvolvimento...  - ', () => {
           
-        // })
+        })
      })
+    
   
               
 
