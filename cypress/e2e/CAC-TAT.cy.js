@@ -296,9 +296,9 @@ it('Exercício Extra 1 - Selecionar um Produto por Seu Valor (MENTORIA)', () => 
         // Basta incluir a linha de comando dentro do arquivo packgae.json na opção de scripts: 
         // "cy:open:mobile": "cypress open --config viewportWidth=410,viewportHeight=860",
         // e executar dentro do terminal o comando cy:open:mobile
-        it('Em desenvolvimento...  - ', () => {
+        // it('Em desenvolvimento...  - ', () => {
           
-        })
+        // })
      })
     
   
